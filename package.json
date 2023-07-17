@@ -1,0 +1,30 @@
+{
+  "name": "composer",
+  "version": "0.0.0",
+  "description": "composer",
+  "scripts": {
+    "clear-win": "rd /s /q .parcel-cache; rd /s /q dist;",
+    "clear-mac": "rm -rf dist & rm -rf .parcel-cache",
+    "clear": "npm run clear-win & npm run clear-mac",
+    "dev": "npm run clear & parcel ./src/index.html",
+    "build": "npm run clear & parcel build ./src/index.html --public-url ./"
+  },
+  "dependencies": {
+    "three": "0.154.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.18.9",
+    "@parcel/transformer-glsl": "^2.7.0",
+    "@parcel/transformer-sass": "^2.6.2",
+    "babel-plugin-transform-remove-console": "^6.9.4",
+    "buffer": "^6.0.3",
+    "parcel": "*",
+    "parcel-reporter-static-files-copy": "^1.4.0"
+  },
+  "staticFiles": {
+    "staticPath": "src/assets/",
+    "staticOutPath": "assets"
+  },
+  "author": "Nicolas Barradeau",
+  "license": "MIT"
+}
