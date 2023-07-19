@@ -1,3 +1,4 @@
+import "./css/main.scss";
 import { Scene, WebGLRenderer, OrthographicCamera } from "three";
 import Effect from "./js/Effect";
 import Quad from "./js/utils/Quad";
